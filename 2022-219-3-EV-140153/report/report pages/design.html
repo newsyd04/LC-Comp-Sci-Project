@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Design - Project Report</title>
+    <link href="/style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://kit.fontawesome.com/64173fb82b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="design-positioner1">
+      
+      <div>
+        <div class="title">
+          <h1>140153 Report Website</h1>
+          <p>Coursework Report</p>
+        </div>
+      </div>
+      
+      <div class="positioner-heading">
+        <div class="text-box3">
+          <div class="child3">
+            <p>Design</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="design-positioner2">
+        <div class="text-box1">
+          <div class="child">
+            <p>I adopted an agile method of development during the course of my project. I believed this form of development was more suitable due to its constant iteration project. I was able to get constant feedback and critiques from my fellow students and teacher. Thus my project became more dependable, as well as this, errors and issues in the development of my project were noticed much earlier than if I had adopted an alternative method of development such as the waterfall method.<p>
+              <br>
+              <p>I reviewed the different forms of embedded systems I could choose to employ in my project. The three standout options were: a Raspberry Pi 4, an Arduino UNO and a MicroBit V2.
+After researching the different functionalities and features of the three models I chose the Raspberry Pi 4 as my embedded system. Its multi core capabilities and 64 bit microprocessor as well as its advanced clock speed made it stand out from its competitors. As well as this, the Raspberry Pi’s use of an OS - Raspian, allowed me to expand the capabilities of my project to include multitasking and have many scripts running in respect to each other.</p>
+            <br>
+            <p>I felt as though the database SQLite would be most suitable for my project as its lightweight and easily embedded software would pair well with the Raspberry Pi compared to more feature heavy databases like MySQL and MongoDB.</P>
+            <br><p>I knew my project would need to include a motion sensor that could be easily integrated with a Raspberry Pi, a SD card to host the Raspian OS. In the end the hardware components for this project were composed of a PIR sensor, a raspberry pi 4 (although I note that other raspberry Pi generations could serve the same purpose with few alterations), several female to female and male to female jumper cables and testing components such as a breadboard, 220 ohm resistors and several LEDs.</p>
+            <br><p>The demographic of my project would be homeowners or renters, aged approximately 18+, of any income level and property size. Although as I noted previously, for full integration into the property’s heating system it may be unavailable for those who rent. Standby power and other forms of the wasting of energy consists of at least 10% of the average homeowner’s electricity and heating spending. Through the use of my project's home heating optimisation tool, the homeowners save money and reduce their carbon footprint.</p><br>
+            <p>This design meets the requirements of the brief and fulfils all specifications that are needed. My company website and its product pages satisfy the requirements of a fictional company based around smart devices for the home. I have ensured that my company website also features a range of products that the company specialises in. My webpage has a plethora of pages, including a home page, contact page, about page and team page, each of which are presented in an easy navigable manner with a user‐friendly navigation bar system. My formatting and information displayed is clear, concise and easy to read. I also include the use of a combination of elements such as headings, paragraphs, lists, tables, links, images and multimedia elements such as animation bars and slideshows. My website is also accessible for all people without the need for adaptation. Furthermore, the website follows my school’s GDPR policy to a tee and does not include any identifiable information.</p><br>
+            <p>As for the embedded system, my system can operate automatically upon being started. There is a constant motion detection looping process that takes place upon starting the system. My embedded system is extended and integrated into my website under an administrative page. Here the system user can view graphings and other data representations from the embedded system. A validation check is applied clearly before entering the administrative page and the defined validation rules are appropriate.</p>
+          </div>
+        </div>
+        
+        <div class="slideshow-positioner">
+          <div class="slideshow-container2">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <img src="../images/dataflowchart.png" style="width:75%">
+              <div class="text2">Data Flow Chart</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="../images/electronics.png" style="width:100%">
+              <div class="text2">Electronics Schematics</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="../images/motion-detection.png" style="width:100%">
+              <div class="text2">Detection Process</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="../images/WIREFRAME INDEX.PNG" style="width:100%">
+              <div class="text2">Homepage Wireframe</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="../images/contact wireframe.PNG" style="width:100%">
+              <div class="text2">Contact Page Wireframe</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="../images/team wireframe.PNG" style="width:100%">
+              <div class="text2">Team Page Wireframe</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="../images/admin wireframe.PNG" style="width:100%">
+              <div class="text2">Admin Page Wireframe</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="../images/initial-pseudocode.PNG" style="width:100%">
+              <div class="text2">Initial Programme Pseudocode</div>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>    
+        </div>
+      </div>
+    </div>
+    <div class="button-position">
+        <button onclick="document.location='/index.html'" type="button" class="cancelbtn">Return</button>
+    </div>
+      <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+    <div class="bg-image"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

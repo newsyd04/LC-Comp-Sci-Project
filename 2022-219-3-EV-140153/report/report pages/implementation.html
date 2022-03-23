@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Implementation - Project Report</title>
+    <link href="/style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://kit.fontawesome.com/64173fb82b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="title">
+      <h1>140153 Report Website</h1>
+      <p>Coursework Report</p>
+    </div>
+    <div class="implementation-positioner">
+      <div class="text-box3">
+        <div class="child3">
+          <p>Implementation and Testing</p>
+        </div>
+      </div>
+      <div class="text-box-implementation">
+        <div class="child">
+          <p>I was inclined towards basing my project on the subject of energy conservation based on my interest in combating climate change and the environment. Once I knew my topic area, I started researching into the more niche and obscure areas of pollution that could be combated by technology. Furthermore, I searched for an aspect of pollution that takes place in the average household due to the low-scale nature of the project. I stumbled across an article discussing the US Department of Energy report that stated that devices that use standby power account for up to 10% of a homeowner’s electricity use. The bulk of this usage is made up of inefficient home heating and sporadic usage of lights in the home, often when it is unnecessary to do so. I began by defining the specific problem I would attempt to solve.<p><br>
+
+          <p>Towards the end of my first week of work, after stating the specific problem to base my project on, I began to research the issue in more detail. I collected information and statistics from many reliable resources such as the United Nations and the BBC to narrow down the focus of my project. I discussed multiple potential solutions for the issue with my fellow students, teacher and family members and then eliminated several based on their effectiveness and my ability to create said solutions. I then began to analyse how I would go about solving the problem with the solution I had chosen. I began to source the components I need to create the artefact, both from online purchases and from electronic components that I had already in my possession left over from previous projects I had completed. In my 3rd and 4th week of work, I next began to design the wireframes for the main webpage. I developed a simple landing page on the website and then began to design a team page. I found the website “thispersondoesnotexist.com” and other similar sites to be useful in creating artificial profiles for my team. I finished the “About” page, “Contact” page, “Team” page and the homepage for the website and populated them with a mixture of HTML elements and data. I ensured that the design of my website reflected that of the 7 principles of design and was laid out in the most clear-cut and unambiguous manner. I began to get feedback from my fellow students, teachers and family members on suggestions they had for the layout and design of the website. This was useful as it gave me an insight into what an end user would look for in a product website. I was able to implement these changes and continued to repeat the process of modification and review weekly throughout the course of my project.
+<p><br>
+          <p>I constructed a test bench for my hardware components. A breadboard was employed to connect the electronic components together. I assembled the test setup using an LED, a resistor, a PIR sensor and a Raspberry Pi 4 (RP4). I imaged an SD card with Raspian which I had chosen to use as the operating system (OS) on the RP4 since this OS is widely considered to be the most suitable for the RP4.  I wrote a python script using the default Python IDE called Thonny which, on detection of motion using the PIR sensor, sends a signal to the GPIO pins of the RP4, illumiating the LED, thus indicating detected motion to the tester. The absence of detected motion resuts in the LED not being illuminated. This process is then looped through until the programme is ended using simple while loops and except parameters. This test bench allowed me to determine if the hardware and software were doing what I had set them out to do.</p><br>
+          <p>
+During my 6th and 7th weeks of work, I installed the SQLite software on the RP4. I then created a database table with the headings of “Date”, “Time” and “Motion”. The motion variable value was either 1 or 0 depending on the detection of motion by the PIR sensor. Next, I modified my pre-existing script so that upon motion detection a value of the motion variable is set. Next, after reading through the SQLite documentation, specifically the areas surrounding RP4 usage, I discovered that the most common way of using SQLite commands inside of a python script is with their own Python library. I found this method to be overly complicated and instead opted to import the “os” library capabilities from Python. I set the SQLite shell script command as a variable and then executed the command using the os.run function. This proved to be successful. To integrate it with my motion detection Python script, I adapted the while loop to input the date, time and motion value into their corresponding headings every second.  This could of course be set to record the motion every 5, 15 or even 60 seconds, depending on how high a resolution is required.</p><br>
+          <p>In my 9th and 10th week of work, I researched into forms of displaying and analysing my gathered data. The application Grafana stood out as it appeared to have great functionality and fit my use case. During the Grafana installation process, I discovered that the services of Grafana and the SQLite databases did not appear to be compatible with each other. The Grafana website and forums instead recommend using either MySQL or MongoDB. However, due to the time constraints of my project I searched for an alternative solution. Through reading forum submissions I came across a featured plugin that was not widely popular. This solution proved to be effective and the problem was solved.</p><br>
+          <p>I created a login page to access the graphed data from the database; this login page acted as an administrative site for the end user. It includes fields for username and password, a tickbox to remember the user and a link to allow the user retrieve their password if ever forgotten. I updated the contact page to include fictional contact information for my company as well as a submission area for online contact. This submission area included key fictional personal information such as a name, email and message section. I included a requirement that each field must be filled out and the page performs type validation on the email address field to ensure that the data entered is in the accepted format of an email address i.e. it must include text, followed by the @ character, again followed by text e.g. “@example.com”. If the data entered is not in this format, it will be rejected.</p><br>
+          <p>Towards the end of my tenth and beginning of 11th week of work, during the process of graphing the database data using Grafana, I found the software did not input my time values as values of time but rather as data values. I was met with difficulty when attempting to solve it and researched the problem in greater detail. I estimated the source of the issue to be related to the data type being recorded as the timestamp, making it unsuitable for the Grafana interface. I edited the database table to change the datatype and reran the motion detecting process to gather new data. After some further minor changes the problem was resolved. I updated my main website to make it responsive for mobile users and edited my code to improve its readability and scalability. The Grafana graphs were then embedded into the administrative website page where they could be analysed by the end user, using the “iframe” element.</p><br>
+          <p>To develop the optimisation features of my device I created an extra column named “mode”. This was the statistical mode of the hours that motion was detected in, for example “nine pm” or “21”. The calculated numeric in this case was the key time slot where the house's heating optimisation could occur. This piece of data was then turned into a graphic separately using Grafana and attached to the website externally using a button link.</p><br>
+          <p>To gain feedback on my project I demonstrated my artefact and the website to many of my peers, teachers and family members. They provided critical feedback on my website design and artefact coding process. This helped me create a stronger and more reliable product.
+</p><br>
+          <p>SYSTEM OPERATION: The device operates by running a motion detection script on start. The Raspberry Pi's attached PIR sensor detects motion and returns a motion value of either '0' or '1' depending on the detection of motion. If motion is detected the time value, date, motion value and hour of detection are logged into an SQLite3 database hosted on the Raspberry Pi. This database is connected to a graphical database service called Grafana. Grafana starts a local server where the database is integrated and the data column values are logged into their corresponding tables. This information can then be viewed on the project website, past an administrative login page. Here the user can view the contents of the database as eitehr a CSV file or as a graphed table. A key time value is calculated using the statistical mode of the motion detection times. This key time value becomes more accurate over time and can demonstrate the most common time a room is used, allowing for the optimisation of the heating in that room, thus saving unnecessary energy consumption.</p>
+        </div>
+      </div>
+      <div class="child2">
+        <iframe width="560" height="315" src="../images/report_video.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div>
+        <button onclick="document.location='/index.html'" type="button" class="cancelbtn">Return</button>
+      </div>
+    </div>
+    <div class="bg-image">
+    </div>
+
+    
+    <script src="script.js"></script>
+  </body>
+</html>

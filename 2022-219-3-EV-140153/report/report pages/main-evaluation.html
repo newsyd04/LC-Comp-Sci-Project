@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Evaluation - Project Report</title>
+    <link href="/style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://kit.fontawesome.com/64173fb82b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="title">
+      <h1>140153 Report Website</h1>
+      <p>Coursework Report</p>
+    </div>
+    <div class="positioner9">
+      <div class="text-box3">
+        <div class="child3">
+          <p>Evaluation</p>
+        </div>
+      </div>
+      <div>
+        <button onclick="document.location='./evaluation.html'" type="button" class="viewbtn">Click to View Weekly Reviews</button>
+      </div>
+      <div class="text-box1">
+        <div class="child">
+          <p>My design complies with the project brief's needs, as well as the necessary specs. My company's website and product pages meet the needs of a fictional organisation that focuses on smart home products. I've made sure that my company's website includes a variety of products that it specialises in. My website includes a wide range of pages, including a home page, contact page, about page, and team page, all of which are presented with a user-friendly navigation bar system and are simple to navigate and are themselves user friendly. My material is presented in a clear, succinct, and easy-to-read manner. I also include the use of a mix of elements including headings, paragraphs, lists, tables, links, photos, and multimedia features including animation bars and slideshows when demonstrating the companies products and switching between pages on the navbar. My website is likewise universally accessible, requiring no modification. Furthermore, the website strictly adheres to my school's GDPR policy and does not contain any personally identifying information.
+</p><br>
+          <p>I faced several problems throughout the course of completing my project, although most were easily solved, others required more intensive problem solving and computational thinking to come to a solution.</p><br>
+
+
+          <p>While attempting to install Grafana, I discovered that the services of Grafana and the SQLite databases did not appear to be readily compatible with each other. The Grafana website and forums, instead recommending to use either MySQL or MongoDB. However, due to the time constraints of my project I searched for an alternative solution. Eventually I found an older plugin that could be integrated into the SQLite database. This solution proved to be effective and the problem was solved.</p><br>
+
+
+          <p>As I was creating the artefact website, I noticed that my design and formatting were proving untidy and messy during tests with the “Lambda Test Browser”, a service designed to test websites at different screen sizes. To solve this problem, I reshaped the website to ensure it was responsive. As well as this, I created code that shrank or grew the elements of the website depending on the user’s screen size to provide the most accessible and readable product possible. This issue was particularly important to solve as it tied into the principles of universal design.</p><br>
+
+
+          <p>During the integration process with Grafana, the service did not accept my data values as a time input, and although I was able to view the individual data as being uploaded to their processes, the graphing process would not take place. To overcome this, I read through the Grafana documentation as well as the SQLite documentation in order to find any crossovers discussing the time inputs between the two pieces of software. Eventually, I discovered that the issue lay with the data input types that I had chosen. I was able to make adjustments and eventually the data was collected and graphed correctly.</p><br>
+          <p>My design objectives were to create a product that was cost effective and for it to contain optimisation features that were not found elsewhere. I have integrated these design objectives into the core of my product and developed the project around them. Firstly, all of the components used to create my artefact were chosen for their cost effective price range. The cables, PIR sensor, resistors and LEDs are all available at a budget price. As well as this, I designed the software to be power and processing efficient so that even with the most expensive component that I used, the Raspberry Pi 4, the software can be ported to other more budget friendly alternatives such as the Raspberry Pi Zero W with few alterations needed. Secondly, my artefact is able to “optimise” the heating process at home though the scripting I wrote. Once a trend in motion is detected, the heating can be automatically activated based on predictions of the room’s usage during the day throughout different times of the year. This is a feature which I was unable to find already available during my research into alternative products.</p><br>
+          <p>Essentially the same software and hardware I have utilised in my project could be improved by expanding the scope of its control and monitoring. For example, lighting control optimization can be easily implemented with the current hardware with some minor adjustments and potentially using a light sensor rather than a PIR sensor.</p><br>
+          <p>A future expansion for the project would be multi-room communication. What this means is that multiple sensors-connected to multiple RP4’s could be positioned throughout the house, for example in the living room, bedroom and kitchen. These separate devices would then communicate with each other to create a more advanced database and profile of the room usage throughout the day.  The system could learn the householder's habits over time and predict which rooms would be used when and so, have the rooms prepared in advance in relaion to lighting and heating. Also, with the system predicting the duration of usage of each room, it can shut down the heating and lighting when it deems the room will be no longer in use for the rest of the day. I would also include an editable variable on the administrative page that allows the user to tweak the durations between each motion detection that they prefer.</p>
+        </div>
+      </div>
+      <div>
+        <button onclick="document.location='/index.html'" type="button" class="cancelbtn">Return</button>
+      </div>
+    </div>
+    <div class="bg-image">
+    </div>
+
+    
+    <script src="script.js"></script>
+  </body>
+</html>
